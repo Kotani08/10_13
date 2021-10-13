@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\PC_User\source\repos\8_6\8_6\main.cpp(43): warning C4715: 'Array::Get': 値を返さないコントロール パスがあります。
+  8_6.vcxproj -> C:\Users\PC_User\source\repos\8_6\Debug\8_6.exe
