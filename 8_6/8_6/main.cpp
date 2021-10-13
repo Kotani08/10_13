@@ -1,17 +1,17 @@
 #include <stdio.h>
-/*y–â‘èz
-ƒƒ‚ƒŠŠm•Û‚ðŽg—p‚µA
-1000ŒÂ‚Ì”z—ñ‚ðŠm•Û‚µ‚ÄA
-‚»‚Ì”z—ñ‚É0`999‚ðÝ’è‚·‚éƒvƒƒOƒ‰ƒ€‚ðì¬‚µ‚Ä‚­‚¾‚³‚¢B
-new‚Ædelete‚Å”z—ñ‚ðŠm•Û‚·‚éˆ—‚ðA
-ƒNƒ‰ƒX‚É‚µ‚ÄƒfƒXƒgƒ‰ƒNƒ^‚ÅŽ©“®‚Ådelete‚ªŒÄ‚Î‚ê‚é‚æ‚¤‚É‚µ‚Ä‚­‚¾‚³‚¢B
+/*ã€å•é¡Œã€‘
+ãƒ¡ãƒ¢ãƒªç¢ºä¿ã‚’ä½¿ç”¨ã—ã€
+1000å€‹ã®é…åˆ—ã‚’ç¢ºä¿ã—ã¦ã€
+ãã®é…åˆ—ã«0ï½ž999ã‚’è¨­å®šã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ä½œæˆã—ã¦ãã ã•ã„ã€‚
+newã¨deleteã§é…åˆ—ã‚’ç¢ºä¿ã™ã‚‹å‡¦ç†ã‚’ã€
+ã‚¯ãƒ©ã‚¹ã«ã—ã¦ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§è‡ªå‹•ã§deleteãŒå‘¼ã°ã‚Œã‚‹ã‚ˆã†ã«ã—ã¦ãã ã•ã„ã€‚
 */
 class Array
 {
     //
 public:
     Array() {}
-    //”z—ñŠm•Û
+    //é…åˆ—ç¢ºä¿
     void Create(int num)
     {
         newArray = new int[num];
@@ -19,14 +19,14 @@ public:
 
     void Set(int num, int num1)
     {
-        //”z—ñ‚ÌƒTƒCƒYŠm”F
+        //é…åˆ—ã®ã‚µã‚¤ã‚ºç¢ºèª
         if (num > miniSize && num < maxSize)
         {
             newArray[num] = num1;
         }
         else
         {
-            printf("—áŠO\n");
+            printf("ä¾‹å¤–\n");
         }
     };
 
@@ -38,7 +38,7 @@ public:
         }
         else
         {
-            printf("—áŠO\n");
+            printf("ä¾‹å¤–\n");
         }
     };
 
@@ -50,13 +50,13 @@ public:
 
 private:
     int* newArray = nullptr;
-    int miniSize = -1;//ƒTƒCƒYŠm”F
-    int maxSize = 1000;
+    int miniSize = -1;//ã‚µã‚¤ã‚ºç¢ºèª
+    int maxSize = num;
 };
 
 int main() 
 {
-    //”z—ñ‚É0`999‚ðÝ’è‚·‚é
+    //é…åˆ—ã«0ï½ž999ã‚’è¨­å®šã™ã‚‹
     Array array;
     array.Create(1000);
 
@@ -70,7 +70,7 @@ int main()
         printf("num = %d\n", array.Get(i));
     }
 
-    //0‚©‚’999ˆÈŠO ”z—ñŠOŽQÆ‚Ìƒ`ƒFƒbƒN
+    //0ã‹ï½’999ä»¥å¤– é…åˆ—å¤–å‚ç…§ã®ãƒã‚§ãƒƒã‚¯
     printf("num = %d\n", array.Get(-1));
     printf("num = %d\n", array.Get(1000));
 }
